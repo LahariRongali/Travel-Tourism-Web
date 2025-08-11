@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px; /* Fixed height for consistency */
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px; /* Fixed height for descriptions */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <!-- Mumbai Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Nature and Adventure/kerala.html">
+                        <img src="https://i.pinimg.com/236x/2d/d3/c2/2dd3c2efe58a37b9657833c9f3a61989.jpg" alt="Munnar">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Kerala</h2>
+                        <div class="amenities">
+                            <span>🌴 Munnar</span>
+                        </div>
+                        <p class="description">Munnar, Kerala, is a breathtaking hill station known for its lush tea plantations, misty mountains, and cool climate. Must-visit spots include Echo Point, Top Station, Eravikulam National Park (home to the endangered Nilgiri Tahr), and Attukal Waterfalls. It’s a perfect getaway for nature lovers, offering trekking, wildlife spotting, and peaceful scenic drives.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bengaluru Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Nature and Adventure/tamilnadu.html">
+                        <img src="https://3.imimg.com/data3/AE/UY/MY-17886443/kovalam-beach.jpg" alt="Kovalam Beach">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Tamilnadu</h2>
+                        <div class="amenities">
+                            <span>🏞️ Kovalam Beach</span>
+                        </div>
+                        <p class="description">Kovalam Beach, located in Kerala, India, is known for its crescent-shaped shoreline, golden sands, and crystal-clear waters. It offers a serene atmosphere, making it perfect for relaxation, sunbathing, and water sports like surfing. The lighthouse at one end of the beach adds to its scenic beauty, making it a popular tourist destination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delhi Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Nature and Adventure/himachal.html">
+                        <img src="https://i.pinimg.com/236x/74/0d/7a/740d7a8fcad5d718dd654e0964808a57.jpg" alt="Manali">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Himachal Pradesh</h2>
+                        <div class="amenities">
+                            <span>⛰️ Manali</span>
+                        </div>
+                        <p class="description">Manali, nestled in the Himalayas of Himachal Pradesh, is a stunning hill station known for its snow-capped mountains, adventure sports, and scenic valleys. Popular attractions include Solang Valley for paragliding and skiing, Rohtang Pass for snow adventures, and Hidimba Devi Temple for cultural charm. It’s a perfect destination for trekking, river rafting, and honeymoon getaways.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hyderabad Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Nature and Adventure/uttarakhand.html">
+                        <img src="https://i.pinimg.com/236x/2c/96/0f/2c960fb47b80c7f39d840860c78690a0.jpg" alt="Jim Corbett National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Uttarakhand</h2>
+                        <div class="amenities">
+                            <span>🏢 Jim Corbett National Park</span>
+                        </div>
+                        <p class="description">Jim Corbett National Park, located in Uttarakhand, is India’s oldest national park and a famous tiger reserve. It is home to Bengal tigers, elephants, leopards, and diverse bird species, making it a paradise for wildlife lovers. Visitors can enjoy thrilling jungle safaris, nature walks, and scenic landscapes along the Ramganga River</p>
+                    </div>
+                </div>
+            </div>
+           
+
+    <script>
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

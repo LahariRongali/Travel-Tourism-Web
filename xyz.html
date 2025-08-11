@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Tour and Travel Agency Website Design </title>
+
+ <!-- swiper cdn link -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- font awesome cdn link  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ <!-- custom css file link  -->
+ <link rel="stylesheet" href="abc.css">
+
+</head>
+
+<body>
+<!-- header section starts -->
+
+
+<header>
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo">
+    <img src="C:\Users\harsh\Downloads\logo.webp" alt="logo">
+  </a>
+  <!-- Add the Font Awesome library -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<nav class="navbar">
+  <a href="#home">home</a>
+  <a href="#Gallery">Gallery</a>
+  <a href="#packages">packages</a>
+  <a href="#contact"><i class="fas fa-phone"></i></a>
+   <!-- Google Translate Widget -->
+
+</nav>
+
+<form id="search-form" class="search-bar-container">
+  <input type="text" id="search-bar" placeholder="Search a city..." required>
+  <button type="submit"><i class="fas fa-search"></i></button>
+</form>
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+    <i class="fas fa-user" id="login-btn"></i>
+    <i class="fas fa-language" id="translate-btn"></i> <!-- Translation Icon -->
+</div>
+
+<!-- Google Translate Widget (Initially Hidden) -->
+<div id="google_translate_element" style="display: none;"></div>
+
+</header>
+
+<!-- Login Page -->
+<div class="login-form-container" id="login-form">
+  <i class="fas fa-times" id="form-close"></i>
+  <form action=""> 
+      <h3>Login</h3>
+      <input type="email" class="box" placeholder="Enter your email" required>
+      <input type="password" class="box" placeholder="Enter your password" required>
+      <input type="submit" value="Login Now" class="btn">
+      <input type="checkbox" id="remember">
+      <label for="remember">Remember me</label>
+      <p>Forgot password? <a href="#">Click here</a></p>
+      <p>Don't have an account? <a onclick="toggleForms()">Register now</a></p>
+  </form>
+</div>
+
+<!-- Register Page -->
+<div class="register-form-container" id="register-form">
+  <i class="fas fa-times" id="form-close"></i>
+  <form action="">
+      <h3>Register</h3>
+      <input type="text" class="box" placeholder="Enter your name" required>
+      <input type="email" class="box" placeholder="Enter your email" required>
+      <input type="password" class="box" placeholder="Enter your password" required>
+      <input type="submit" value="Sign Up" class="btn">
+      <input type="checkbox" id="remember-reg">
+      <label for="remember-reg">Remember me</label>
+      <p>Already have an account? <a onclick="toggleForms()">Login now</a></p>
+  </form>
+</div>
+
+
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>Adventure is worthwhile</h3>
+    <p>Discover new places with us, adventure awaits</p>
+    <a href="#packages" class="btn">Discover More</a>
+  </div>
+  
+    <!-- Background Video -->
+  <div class="background-video">
+    <video autoplay muted loop plays-inline class="back-video">
+    <source src="mean.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+  
+
+<!-- home section ends --> 
+
+
+
+
+<!-- book section ends -->
+
+
+<!-- packages section starts -->
+
+
+<section class="packages" id="packages">
+
+  <h1 class="heading">
+    <span>p</span>
+    <span>a</span>
+    <span>c</span>
+    <span>k</span>
+    <span>a</span>
+    <span>g</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box" data name="Modern cities.html" data-locations="mumbai.html, delhi.html, bengaluru.html" >
+      <img src="https://cdn.getyourguide.com/img/tour/5f4f27f1cb2fc585.jpeg/146.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Modern Cities </h3>
+        <p>Mumbai (Maharashtra) – Bollywood, Gateway of India.
+          Bengaluru (Karnataka) – IT hub, gardens.
+          Delhi – Blend of history and cosmopolitan vibes.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price">  <span></span> </div>
+        <a href="modern cities.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="box" >
+      <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQBbnEjgwiplMw3Z7H5wKEhv3msM2GXb5vuVKyAIFH_PahjHFEzp1nDYWXeHMi5y6KRNd9WOLxLgBhKWXthEY5evkRNAfmDcG-hl5KtuA" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Cultural Hotspots</h3>
+        <p>Udaipur (Rajasthan) – City of Lakes.
+          Mysore (Karnataka) – Palaces and Dasara festival.
+          Khajuraho (Madhya Pradesh) – Intricate temple sculptures.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+         
+        </div>
+        <div class="price">  <span></span> </div>
+        <a href="cultural hotspots.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTxeUoKDBkLtLlzPtDHivWFu0Pl5kPqpfBW3kBWQUmxnrRfkVO9j8YICs1FPoCPTmBZlwYhHtVYJbHqAqXSiCoyJHSj3JaoL94EBKogyQ" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Nature and Adventure</h3>
+        <p>Leh-Ladakh (Jammu & Kashmir) – Breathtaking landscapes, treks.
+          Andaman & Nicobar Islands – Beaches, coral reefs.
+          Jim Corbett National Park (Uttarakhand) – Wildlife safaris.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price"> <span></span> </div>
+        <a href="nature.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <img src="https://hblimg.mmtcdn.com/content/hubble/img/agra/mmt/activities/t_ufs/m_activities-agra-taj-mahal_l_400_640.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i>Historical Sites</h3>
+        <p>Taj Mahal (Agra) – Iconic Mughal architecture.
+          Jaipur (Rajasthan) – Amer Fort, Hawa Mahal.
+          Hampi (Karnataka) – Ancient ruins and temples.</p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price">  <span></span> </div>
+        <a href="hs.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+    
+
+    <div class="box">
+      <img src="https://hblimg.mmtcdn.com/content/hubble/img/goa/mmt/destination/m_destination-goa-landscape_l_400_640.jpg" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Hill Stations&Beaches</h3>
+        <p>Manali (Himachal Pradesh) ,
+          Ooty (Tamil Nadu),.
+          Darjeeling (West Bengal) and Goa ,
+          Pondicherry 
+          Kerala’s Varkala </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price">  <span></span> </div>
+        <a href="bh.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7aEoJtB9ZmR-9VLMbJo42svD3-OhECe9SNw&s" alt="">
+      <div class="content">
+        <h3> <i class="fas fa-map-marker-alt"></i> Wildlife Safaris</h3>
+        <p>Ranthambore National Park (Rajasthan) ,
+          Jim Corbett National Park (UttaraKhand),.
+          Sundarbans National Park (West Bengal) and  Gir National Park(Gujarat).
+          
+          </p>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price">  <span></span> </div>
+        <a href="wild.html" class="btn">Explore</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- packages section ends -->
+
+
+<!-- services section starts -->
+<section class="services" id="services">
+
+  <h1 class="heading">
+    <span>s</span>
+    <span>e</span>
+    <span>r</span>
+    <span>v</span>
+    <span>i</span>
+    <span>c</span>
+    <span>e</span>
+    <span>s</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fas fa-hotel"></i>
+      <h3>affordable hotels</h3>
+      <p></p>
+    </div>
+    <div class="box">
+      <i class="fas fa-utensils"></i>
+      <h3>food and drinks</h3>
+      <p></p>
+    </div>
+    <div class="box">
+      <i class="fas fa-bullhorn"></i>
+      <h3>safty guide</h3>
+      <p></p>
+    </div>
+    <div class="box">
+      <i class="fas fa-globe-asia"></i>
+      <h3>around the world</h3>
+      <p></p>
+    </div>
+    <div class="box">
+      <i class="fas fa-plane"></i>
+      <h3>fastest travel</h3>
+      <p></p>
+    </div>
+    <div class="box">
+      <i class="fas fa-hiking"></i>
+      <h3>adventures</h3>
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts -->
+
+<section class="gallery" id="Gallery">
+
+  <h1 class="heading">
+    <span>g</span>
+    <span>a</span>
+    <span>l</span>
+    <span>l</span>
+    <span>e</span>
+    <span>r</span>
+    <span>y</span>
+  </h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCuODgYppKVtLpWslqDZymwi2X9DE19_1FOw&s" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJk7XnrgBeb6a5c1CIXzSLvT0W-w3ehmr6tA&s" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/07/20204731/10-famous-historical-places-in-India-05.jpg" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2023/02/pm-18-1677327586.jpg" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-2vaKDCeVCXknZSOVfLFbOvM8Z-aCCyRPw&s" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://media.gettyimages.com/id/458691391/photo/temple-night-view.jpg?s=612x612&w=0&k=20&c=n6jQYy87q-FL2nUJrJTA9FQbQR4naTCzbaqg6CA0A8k=" alt="">
+      <div class="content">
+       
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeEcRJ7k3bVlgIAX4cD5Y_AREYb2BzEFUomQ&s" alt="">
+      <div class="content">
+       
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDBfiqPZuCrPhBhQ1IFUMge0Atj-lkaOiLA&s" alt="">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJoVBX5JFeLj5wgupwuFM9w0NV1rOr_oS5A&s" alt="">
+      <div class="content">
+       
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- gallery section ends -->
+
+
+
+<!-- review section starts  -->
+<section class="review" id="review">
+
+  <h1 class="heading">
+    <span>r</span>
+    <span>e</span>
+    <span>v</span>
+    <span>i</span>
+    <span>e</span>
+    <span>w</span>
+  </h1>
+
+  <div class="swiper-container review-slider">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="https://i.pinimg.com/474x/36/a2/e2/36a2e242bfe3ac039e0618fbaaef7596.jpg" alt="">
+          <h3>Rahul Verma</h3>
+          <p>Exceptional service! The tour packages were well-planned and the destinations were breathtaking. Will definitely book again for my next adventure.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="https://i.pinimg.com/474x/e6/d5/85/e6d58567bc40431679bc30370ade99ea.jpg" alt="">
+          <h3>Sneha Reddy</h3>
+          <p>The cultural tours were amazing! The guides were knowledgeable and the historical sites were perfectly curated. A memorable experience overall.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="https://i.pinimg.com/736x/38/93/07/389307d6af5c4be0051b7d3c4f93bf3d.jpg" alt="">
+          <h3>Jhon Deo</h3>
+          <p>Great wildlife safari experience! The accommodations were comfortable and the tour guides made sure we spotted plenty of wildlife. Highly recommended!</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="https://i.pinimg.com/474x/af/d0/42/afd0421e2996d4fce08041d1a82b6e8b.jpg" alt="">
+          <h3>Aryan Shah</h3>
+          <p>The hill station package was perfect! Beautiful locations, comfortable stays, and excellent coordination throughout the trip. Looking forward to more tours!</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="box">
+          <img src="https://i.pinimg.com/474x/96/e5/17/96e517ea53e67a7d5906d794d509dfb9.jpg" alt="">
+          <h3>Brinda</h3>
+          <p>Outstanding beach tour experience! The itinerary was well-balanced between relaxation and activities. The local food recommendations were spot on!</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<section class=" Contact" id="contact">
+
+  <h1 class="heading">
+    <span>c</span>
+    <span>o</span>
+    <span>n</span>
+    <span>t</span>
+    <span>a</span>
+    <span>c</span>
+    <span>t</span> 
+  </h1>
+  <div class="contact-info-wrap">
+    <div class="row">
+        <div class="col-md-4">
+            <!--Single Contact Info Start -->
+            <div class="single-contact-info text-center">
+                <div class="info-icon">
+                    <i class="fa fa-phone-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h5 class="title">Contact Number</h5>
+                    <a href="tel:9876543210"><p>1810025360</p></a>
+                </div>
+            </div>
+            <!--Single Contact Info End -->
+        </div>
+
+        <div class="col-md-4">
+            <!--Single Contact Info Start -->
+            <div class="single-contact-info text-center">
+                <div class="info-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                    <h5 class="title">Email Address</h5>
+                    <a href="mailto: info@raoholidays.in"><p> connect@gmail.com</p></a>
+                    <a href="mailto: reservations@raoholidays.in"><p>WanderWorldTours@gmail.com</p></a>
+                </div>
+            </div>
+            <!--Single Contact Info End -->
+        </div>
+
+        <div class="col-md-4">
+            <!--Single Contact Info Start -->
+            <div class="single-contact-info text-center">
+                <div class="info-icon">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="info-content">
+                    <h5 class="title">Location</h5>
+                    <p>SRKR Engineering College,Bhimavarm,AndhaPradesh</p>
+                </div>
+            </div>
+            <!--Single Contact Info End -->
+        </div>
+    </div>
+</div>
+
+  
+
+</section>
+
+
+
+
+
+
+
+
+<section class="brand-container">
+
+  <div class="swiper-container brand-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section class="footer">
+
+  <div class="box-container">
+
+    <div class="box">
+      <h3>about us</h3>
+      <p>Welcome to Travel Brand, where every journey is designed to inspire and create lasting memories. We are passionate about transforming your travel dreams into reality by offering tailor-made experiences that reflect your interests, preferences, and aspirations. Whether it’s exploring hidden gems, immersing yourself in diverse cultures, or simply unwinding in serene landscapes, we ensure every moment is extraordinary. With a focus on quality, sustainability, and customer satisfaction, we connect you with the beauty of the world in the most seamless and enriching way. Embark on a journey with us and discover the magic of travel like never before!</p>
+    </div>
+    <div class="box">
+      <h3>branch locations</h3>
+      <a href="#">Bengaluru</a>
+      <a href="#">MadhyaPradesh</a>
+      <a href="#">AndhraPradesh</a>
+      
+    </div>
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">book</a>
+      <a href="#">packages</a>
+      <a href="#">services</a>
+      <a href="#">gallery</a>
+      <a href="#">review</a>
+      <a href="#">contact</a>
+    </div>
+    <div class="box">
+      <h3>follow us</h3>
+      <a href="#">facebook</a>
+      <a href="#">instagram</a>
+      <a href="#">twitter</a>
+     
+    </div>
+  </div>
+  <h1 class="credit"> created by <span> Prakash </span> | all rights reserved! </h1>
+</section>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Google Translate Widget -->
+
+
+
+<script src="harshi.js"></script>
+
+<script>
+  function toggleForms() {
+      document.getElementById('login-form').classList.toggle('active');
+      document.getElementById('register-form').classList.toggle('active');
+  } 
+</script>
+
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,te,ta',  // Languages you want to support
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script>
+  document.getElementById("translate-btn").addEventListener("click", function() {
+      var translateElement = document.getElementById("google_translate_element");
+      translateElement.style.display = (translateElement.style.display === "none" || translateElement.style.display === "") 
+          ? "block" 
+          : "none";
+  });
+</script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi,te,ta',  
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+<script>
+  document.getElementById("search-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent page reload
+      
+      var query = document.getElementById("search-bar").value.trim().toLowerCase();
+      var packages = document.querySelectorAll(".box");
+
+      let found = false;
+
+      packages.forEach(function(package) {
+          var locations = package.getAttribute("data-locations").toLowerCase();
+          
+          if (locations.includes(query)) {
+              package.scrollIntoView({ behavior: "smooth", block: "start" });
+              found = true;
+          }
+      });
+
+      if (!found) {
+          alert("No matching city found! Try a different one.");
+      }
+  });
+</script>
+
+
+
+</body>
+</html>
+xyz.html
+Displaying xyz.html.

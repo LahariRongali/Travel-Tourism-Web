@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/474x/22/71/07/227107921f15299be7163c50b865c23f.jpg" alt="Enchanting Bengaluru ">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Hyderabad</h1>
+                <p>In Hyderabad, where history and modernity come together, every corner offers a rich blend of culture, heritage, and exciting new experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">"Hyderabad – where the past and future blend seamlessly, from the majestic Charminar to the thriving IT hubs, offering a perfect mix of history, culture, and modernity."</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Hyderabad</h2>
+        <div class="about-content">
+            <p>In the heart of southern India, Hyderabad flourishes as a city where royal history blends with modern innovation, offering an unforgettable journey for every traveler</p>
+            <p>From the historic charm of Charminar to the modern tech hubs of HITEC City, Hyderabad offers a perfect fusion of tradition and innovation. Whether you’re savoring its mouth-watering cuisine, exploring its bustling markets, delving into its rich cultural heritage, or enjoying its growing nightlife, Hyderabad welcomes you to a city where the past and future come together, offering a unique experience at every turn</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Hyderabad</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/07/ba/1b/07ba1b93c954ae2f73e4426e9316d0c0.jpg" alt="Ramoji Film City" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Ramoji Film City</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,587 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Ramoji Film City is one of the largest film studio complexes in the world and a top modern tourism destination in Hyderabad. It offers an immersive experience into the world of filmmaking, with themed sets, live shows, and a variety of rides. Visitors can explore film sets, participate in studio tours, and enjoy attractions like the Star Wars-themed set, a mini amusement park, and an interactive science center. It's a must-visit for anyone interested in cinema, entertainment, or looking for a fun and unique experience in Hyderabad.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/8f/59/89/8f598909074d4924555e6a0a40fe3359.jpg" alt="falaknuma palace" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>falaknuma palace</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(1,156 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Falaknuma Palace is one of the most opulent and historically significant palaces in Hyderabad. Built in the 19th century, it served as the residence of the Nizam's guests and offers a glimpse into the grandeur of the Nizam’s era. Located on a hilltop, the palace offers stunning panoramic views of the city.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/85/f8/c7/85f8c79670f6e5dcaff30d177fb4f45c.jpg" alt="Buddha Statue on Hussain Sagar Lake" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Buddha Statue on Hussain Sagar Lake</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(3,000 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Buddha Statue on Hussain Sagar Lake is one of the most iconic landmarks in Hyderabad and a symbol of the city's cultural heritage. Located in the middle of the lake, the statue stands as one of the tallest monolithic statues of Buddha in the world, measuring around 17 meters (56 feet) in height.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/474x/f0/8a/e5/f08ae5bfdc844167bcb01194d3954585.jpg" alt="Beautiful mumbai ">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Mumbai</h1>
+                <p>Where the sun, sand, and sea create memories that last forever</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">"In Mumbai, every street, every skyline, and every wave tells a story of endless possibilities and timeless experiences"</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Mumbai</h2>
+        <div class="about-content">
+            <p>Nestled along the Arabian Sea, Mumbai is a vibrant metropolis that seamlessly blends tradition with modernity. With its iconic landmarks, bustling streets, cutting-edge architecture, and diverse culture, Mumbai offers a unique travel experience that draws millions of visitors from around the world.</p>
+            <p>From the glamour of Marine Drive to the historic charm of the Gateway of India, Mumbai has something for every traveler. Whether you're exploring the city's art galleries, indulging in its street food, immersing in its buzzing nightlife, or soaking in the serene views of the coastline, Mumbai welcomes you to a world where dreams are made and memories are created.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Mumbai</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/4f/51/96/4f5196a25201439e83cc1775d5f7cf9e.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Bandra–Worli Sea Link</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,348 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Bandra-Worli Sea Link is a stunning engineering marvel that connects two of Mumbai's most iconic neighborhoods. With its sleek design, panoramic vistas of the Arabian Sea, and the city's skyline, it offers an unforgettable drive, especially at sunset.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/1b/8e/16/1b8e16fb87dfb1134431f4e92eab35e3.jpg" alt="Phoenix Marketcity" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Phoenix Marketcity</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(1,887 reviews)</span>
+                    </div>
+                    <p class="attraction-description"> Phoenix Marketcity is one of Mumbai's largest and most modern malls. With global brands, an IMAX theater, and a variety of dining options, it’s a one-stop destination for fashion, fun, and food, offering a vibrant experience for all.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/80/05/a1/8005a1d1d8be6072ad2223a8ba6998e4.jpg" alt="Global Vipassana Pagoda" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Global Vipassana Pagoda</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,163 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Global Vipassana Pagoda is a magnificent 21st-century Buddhist monument, featuring the world’s largest stone dome. It offers visitors a peaceful retreat with panoramic views, spiritual tranquility, and a serene atmosphere, making it a perfect blend of modern architecture and ancient wisdom.</p>
+                </div>
+            </div>
+
+            <!-- Add more attraction cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>

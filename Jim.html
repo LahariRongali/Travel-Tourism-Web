@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/b6/f0/54/b6f054c7619d22bd3a0d48df0f092ffc.jpg" alt="">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Jim Corbett National Park</h1>
+                <p>Jim Corbett National Park – Where the roar of the wild echoes through nature's heart.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">Home to the majestic Bengal Tiger, Jim Corbett National Park is India's first national park. A symbol of wildlife conservation, it showcases nature's untouched splendor.</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Jim Corbett National Park</h2>
+        <div class="about-content">
+            <p>Jim Corbett National Park, the first national park of India, is a haven for the majestic Bengal Tiger. Spanning 1,318 square kilometers, it boasts dense forests, grasslands, and riverine belts, offering a rich biodiversity.</p>
+            <p>Beyond its renowned tigers, Jim Corbett National Park is home to a diverse ecosystem with over 600 species of fauna. Its unique landscape of dense sal forests, grasslands, and riverine habitats creates a thriving environment, making it a vital biodiversity hotspot in India.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Jim Corbett National Park</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/63/2e/17/632e173dd819c70a5c7a40f7761901de.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Dhikala Zone</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,518 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Dhikala Zone, the most renowned and picturesque area of Jim Corbett National Park, offers visitors expansive grasslands and dense forests. This zone is celebrated for its frequent sightings of Bengal tigers, wild elephants, and diverse wildlife. Access is limited to canter safaris or overnight stays at forest lodges, providing an immersive jungle experience. </p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/a2/b5/71/a2b57195399402e88c5c07e0bc3c4bed.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Bijrani Zone</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(3,192 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Bijrani Zone, a prominent safari area in Jim Corbett National Park, is celebrated for its rich biodiversity and varied landscapes. Visitors have excellent opportunities to observe Bengal tigers, leopards, elephants, and various deer species in their natural habitats. </p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/d5/7f/4d/d57f4d3a8f46c5943edc8a1cf8507083.jpg" alt="" class="attraction-image">
+                <div class="attraction-info">
+                    <h3> sloth bears</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(1,863 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Sloth bears are fascinating nocturnal creatures known for their shaggy fur, long claws, and distinctive feeding habits. Their diet mainly consists of termites and honey, which they locate using an exceptional sense of smell. Frequently spotted in Jim Corbett National Park, they thrive in dense forests and open grasslands.</p>
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px; /* Fixed height for consistency */
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px; /* Fixed height for descriptions */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <!-- Mumbai Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Modern cities/mumbai.html">
+                        <img src="https://i.pinimg.com/474x/c7/9f/84/c79f84c9c23611ae8850227bb4d4a73e.jpg" alt="Gateway of India">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Mumbai</h2>
+                        <div class="amenities">
+                            <span>🏛️ Monument</span>
+                        </div>
+                        <p class="description">The Gateway of India, built in 1924, stands as Mumbai's most iconic landmark overlooking the Arabian Sea. This magnificent arch-monument commemorates the 1911 visit of King George V and Queen Mary. Blending Hindu and Muslim architectural styles, it serves as a popular tourist destination and starting point for Elephanta Caves tours. The monument represents Mumbai's historical significance and continues to be a symbol of the city's maritime heritage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bengaluru Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Modern cities/bengaluru.html">
+                        <img src="https://i.pinimg.com/736x/1b/30/0a/1b300afe36c5e0ce4a7db6af86ad3284.jpg" alt="Bengaluru Tech Hub">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Bengaluru</h2>
+                        <div class="amenities">
+                            <span>💻 Tech Hub</span>
+                        </div>
+                        <p class="description">Bengaluru, India's Silicon Valley, stands as the nation's premier IT hub and startup capital. The city hosts numerous tech parks and multinational companies, seamlessly blending modern innovation with traditional charm. Known for its pleasant climate and green spaces like Lalbagh Botanical Garden, the city offers a perfect mix of technology and natural beauty. Its vibrant culture includes diverse cuisines and a thriving craft beer scene.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delhi Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Modern cities/delhi.html">
+                        <img src="https://i.pinimg.com/474x/ff/8a/f2/ff8af2971ba6bb7ec60bffd5e55cfaf2.jpg" alt="India Gate">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Delhi</h2>
+                        <div class="amenities">
+                            <span>🏛️ War Memorial</span>
+                        </div>
+                        <p class="description">India Gate, the 42-meter tall war memorial in New Delhi, honors Indian soldiers who sacrificed their lives in World War I. Built in 1931, this architectural marvel draws inspiration from Paris's Arc de Triomphe. The eternal flame, Amar Jawan Jyoti, burns beneath the arch, commemorating unknown soldiers. Surrounded by verdant lawns, it's a beloved evening destination for families and tourists alike.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hyderabad Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Modern cities/hyd.html">
+                        <img src="https://i.pinimg.com/736x/93/32/f8/9332f8a07ae4551efeec53325f0917c6.jpg" alt="HITEC City">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Hyderabad</h2>
+                        <div class="amenities">
+                            <span>🏢 Tech Park</span>
+                        </div>
+                        <p class="description">HITEC City represents Hyderabad's emergence as a global technology hub. This modern business district features the iconic Cyber Towers and houses numerous multinational corporations. With state-of-the-art infrastructure, luxury hotels, and entertainment venues, it exemplifies the perfect balance of work and leisure. The area stands as a testament to India's growing technological prowess and economic development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indore Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Modern cities/indore.html">
+                        <img src="https://i.pinimg.com/736x/80/ac/7a/80ac7a7fa4c4899ff005f0003cf601b0.jpg" alt="Rajwada Palace">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Indore</h2>
+                        <div class="amenities">
+                            <span>👑 Royal Palace</span>
+                        </div>
+                        <p class="description">Rajwada Palace, constructed in 1747, exemplifies the grandeur of Maratha architecture in Indore. This seven-story marvel combines Maratha, Mughal, and French architectural elements. Featuring intricate wooden carvings, detailed paintings, and a magnificent courtyard, the palace sits at the heart of Indore's bustling market district. It stands as a proud symbol of the Holkar dynasty's royal heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

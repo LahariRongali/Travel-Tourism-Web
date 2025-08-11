@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/1e/d0/f9/1ed0f9f842c92b2abfe07e4d8634c88f.jpg" alt="Enchanting Indore">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Indore</h1>
+                <p>In Indore, where tradition meets progress, every street and skyline reflects a unique fusion of culture, heritage, and vibrant modern experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">"Indore – where tradition and innovation coexist, from the historic Rajwada Palace to the bustling modern markets, offering a unique blend of rich heritage, vibrant culture, and contemporary charm."</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Indore</h2>
+        <div class="about-content">
+            <p>In the heart of central India, Indore thrives as a city where rich history fuses with contemporary growth, offering an unforgettable experience for every traveler.</p>
+            <p>From the royal grandeur of Rajwada Palace to the modern vibrancy of Sarafa Bazaar, Indore offers a perfect blend of heritage and contemporary flair. Whether you're indulging in its famous street food, exploring its lively markets, immersing in its rich cultural traditions, or experiencing its evolving nightlife, Indore welcomes you to a city where the past and present unite, creating an unforgettable journey at every corner.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Indore</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/85/bc/fc/85bcfc9b45d5401a6ec0e28dae85ffb5.jpg" alt="Rajwada Palace" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Rajwada Palace</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(1,234 reviews)</span>
+                    </div>
+                    <p class="attraction-description">
+                        Rajwada Palace is one of Indore's most iconic and historical landmarks, reflecting the grandeur and royal heritage of the Holkar dynasty. This majestic palace is a perfect blend of Maratha, Mughal, and French architectural styles, showcasing the rich cultural history of Indore.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/1e/d0/f9/1ed0f9f842c92b2abfe07e4d8634c88f.jpg" alt="Lal Baag Palace" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Lal Baag Palace</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(2,142 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Lal Baag Palace is a historical palace located in Indore, built during the reign of the Holkar dynasty. The palace is known for its stunning blend of Maratha and Mughal architectural styles, showcasing a rich royal heritage. It was originally built as a royal residence for the Holkar rulers and is surrounded by lush gardens.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/80/ac/7a/80ac7a7fa4c4899ff005f0003cf601b0.jpg" alt="Jahaz Mahal" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Jahaz Mahal</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(1,653 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Jahaz Mahal, also known as the "Ship Palace," is a stunning historical monument located in Mandu, Madhya Pradesh. It is one of the most famous attractions in the region and is known for its unique architecture and picturesque setting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

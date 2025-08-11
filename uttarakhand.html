@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://as1.ftcdn.net/v2/jpg/01/89/52/82/1000_F_189528297_h8isVylVyDAWnEc8C3LDSACWfnIN3qHa.jpg" alt="Beautiful Uttarakhand">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Uttarakhand</h1>
+                <p>Explore the breathtaking landscapes, lush valleys, and adventure-filled trails of Uttarakhand.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">Where the Ganges begins its journey, and the Himalayas stand as silent guardians – Uttarakhand, a land of spiritual serenity, breathtaking landscapes, and timeless adventure.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Bengaluru</h2>
+        <div class="about-content">
+            <p>In the heart of northern India, Uttar Pradesh stands as a land where timeless heritage meets dynamic progress, offering a journey that fascinates every traveler.</p>
+            <p>From the iconic grandeur of the Taj Mahal to the spiritual essence of Varanasi, the state is a tapestry of history, culture, and modern growth, inviting you to explore its rich traditions, vibrant cities, and sacred rivers.</p>
+        </div>
+    </div>
+
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Uttarakhand</h2>
+        <div class="attractions-grid">
+            <!-- Attraction 1 -->
+            <div class="attraction-card">
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQhFIsCTgtXFpvL_l11LhQBiB_rKkJbVMriV-G-Om_rXWT9J5J8Jud-4TNv9uBTXp_19BX-yR7ylE8Qf3Q4VH1jgA6fGPX2QBnC6ozlgg" alt="Valley of Flowers" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Valley of Flowers</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(4,200 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Valley of Flowers is a breathtaking UNESCO World Heritage Site in Uttarakhand, famous for its vibrant alpine flowers and picturesque views. It offers a serene trekking experience, perfect for nature enthusiasts like you who appreciate both beauty and adventure.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 2 -->
+            <div class="attraction-card">
+                <img src="https://static.toiimg.com/img/72885514/Master.jpg" alt="Auli" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Auli</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(4,200 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Auli is a popular hill station in Uttarakhand, known for its stunning snow-covered slopes and being one of India's best skiing destinations. It offers breathtaking views of the Himalayas and various adventure activities like skiing and trekking.</p>
+                </div>
+            </div>
+
+            <!-- Attraction 3 -->
+            <div class="attraction-card">
+                <img src="https://www.adventurenation.com/blog/wp-content/uploads/2016/08/Roopkund.jpg" alt="Roopkund Trek" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Roopkund Trek</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(4,200 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Roopkund Trek in Uttarakhand is famous for the mysterious Roopkund Lake, known for its skeletal remains found in the lake's vicinity. It offers a challenging but rewarding journey through dense forests, alpine meadows, and snow-covered landscapes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

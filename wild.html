@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Previous CSS styles remain unchanged */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hotel-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 240px;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .image-container {
+            width: 200px;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+            stroke: #666;
+            stroke-width: 2;
+            transition: all 0.3s ease;
+        }
+
+        .heart-icon.active svg {
+            fill: #ff0000;
+            stroke: #ff0000;
+        }
+
+        .hotel-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .hotel-details {
+            flex-grow: 1;
+        }
+
+        .tourism-place {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .amenities {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            height: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+        }
+
+        @media (max-width: 768px) {
+            .hotel-card {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 200px;
+            }
+
+            .description {
+                height: auto;
+                -webkit-line-clamp: 4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hotel-list">
+            <!-- Jim Corbett Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Wildlife/Jim.html">
+                        <img src="https://i.pinimg.com/736x/8b/13/4f/8b134fd049b72160bb5977974278ebc5.jpg" alt="Jim Corbett National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Jim Corbett National Park</h2>
+                        <div class="amenities">
+                            <span>🐯 Tiger Reserve</span>
+                        </div>
+                        <p class="description">Located in Uttarakhand, Jim Corbett National Park is India's oldest national park and a premier tiger reserve. Known for its rich biodiversity, the park offers excellent opportunities for tiger spotting, bird watching, and wildlife photography. Visitors can enjoy jeep safaris, elephant rides, and stays in forest lodges while exploring the diverse flora and fauna of the park. The reserve is home to Bengal tigers, Asian elephants, leopards, and various species of deer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ranthambore Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Wildlife/ranthambore.html">
+                        <img src="https://i.pinimg.com/736x/01/de/a6/01dea6ab365f93ae1223bda37448ec8c.jpg" alt="Ranthambore National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Ranthambore National Park</h2>
+                        <div class="amenities">
+                            <span>🏰 Fort & Wildlife</span>
+                        </div>
+                        <p class="description">Situated in Rajasthan, Ranthambore National Park is famous for its Bengal tigers and the historic Ranthambore Fort. The park offers a unique blend of natural and historical heritage, with ancient ruins scattered throughout the forest. Visitors can enjoy jeep and canter safaris while spotting tigers, leopards, sloth bears, and various species of deer against the backdrop of the Aravalli and Vindhya ranges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kaziranga Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Wildlife/kaziranga.html">
+                        <img src="https://i.pinimg.com/474x/c2/e7/f4/c2e7f49eccf2253a4b315ac269a2b8f8.jpg" alt="Kaziranga National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Kaziranga National Park</h2>
+                        <div class="amenities">
+                            <span>🦏 Rhinoceros Haven</span>
+                        </div>
+                        <p class="description">Home to two-thirds of the world's one-horned rhinoceros, Kaziranga National Park in Assam is a UNESCO World Heritage site. The park features vast expanses of elephant grass, marshland, and dense tropical forests. Visitors can spot Indian rhinoceros, wild elephants, tigers, and numerous bird species. The park offers elephant safaris and jeep tours for wildlife viewing and photography.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sundarbans Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Wildlife/sundarbans.html">
+                        <img src="https://i.pinimg.com/736x/22/57/08/22570853d8d752da89ead64c83639814.jpg" alt="Sundarbans National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Sundarbans National Park</h2>
+                        <div class="amenities">
+                            <span>🐅 Mangrove Forest</span>
+                        </div>
+                        <p class="description">The Sundarbans is the world's largest mangrove forest and a UNESCO World Heritage site spanning India and Bangladesh. This unique ecosystem is home to the royal Bengal tiger, estuarine crocodiles, and various species of birds. Visitors can explore the dense mangrove forests through boat safaris, spot wildlife, and experience the remarkable adaptation of flora and fauna to the tidal environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gir Card -->
+            <div class="hotel-card">
+                <div class="image-container">
+                    <a href="Wildlife/gir.html">
+                        <img src="https://i.pinimg.com/474x/f0/d2/16/f0d216984d3894b22dbc4333b49c6a41.jpg" alt="Gir National Park">
+                    </a>
+                    <div class="heart-icon" onclick="toggleHeart(this)">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-details">
+                        <h2 class="tourism-place">Gir National Park</h2>
+                        <div class="amenities">
+                            <span>🦁 Asiatic Lion Sanctuary</span>
+                        </div>
+                        <p class="description">Gir National Park in Gujarat is the last remaining natural habitat of the Asiatic lion. The park features dry deciduous forests, acacia scrub, and grassland, providing an ideal environment for these majestic creatures. Besides lions, visitors can spot leopards, jackals, and various species of deer. The park offers jeep safaris and guided tours for wildlife enthusiasts and photographers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

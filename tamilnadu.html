@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        /* Attractions Section */
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/16/93/63/16936390b2441d80a3c7f22afaf913e3.jpg" alt="Enchanting Tamil Nadu">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Tamil Nadu</h1>
+                <p>Explore the breathtaking landscapes, majestic hills, and diverse wildlife of Tamil Nadu, a land of natural beauty and adventure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <p class="quote">A land of majestic temples, classical arts, and modern marvels – Tamil Nadu, where history echoes and the future shines bright.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Discover Tamil Nadu</h2>
+        <div class="about-content">
+            <p>In the heart of southern India, Tamil Nadu blends ancient heritage with modern vibrance, offering a journey of culture, history, and nature.</p>
+            <p>From the majestic temples of Madurai to the serene beaches of Rameswaram, the state captivates with its rich traditions, scenic landscapes, and warm hospitality, making every moment a timeless experience.</p>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Tamil Nadu</h2>
+        <div class="attractions-grid">
+            <!-- Ooty -->
+            <div class="attraction-card">
+                <img src="https://c0.wallpaperflare.com/preview/169/454/322/india-ooty-indian-railways-hill-station.jpg" alt="Ooty" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Ooty</h3>
+                    <p class="attraction-description">Ooty, the 'Queen of Hill Stations,' is known for its misty landscapes, sprawling tea gardens, and scenic Nilgiri Mountain Railway. A perfect retreat for nature and adventure lovers.</p>
+                </div>
+            </div>
+
+            <!-- Kodaikanal -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/08/06/36/080636d4d0980b63c0db178b04401f98.jpg" alt="Kodaikanal" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Kodaikanal</h3>
+                    <p class="attraction-description">Kodaikanal, the 'Princess of Hill Stations,' features serene lakes, lush pine forests, and breathtaking viewpoints, making it a haven for trekkers and nature enthusiasts.</p>
+                </div>
+            </div>
+
+            <!-- Mudumalai National Park -->
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/1c/60/92/1c60929ef2216d33ca8b74eb0fff720b.jpg" alt="Mudumalai National Park" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Mudumalai National Park</h3>
+                    <p class="attraction-description">A UNESCO-listed wildlife sanctuary, Mudumalai is home to majestic tigers, elephants, and diverse bird species, offering thrilling safaris and rich biodiversity experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

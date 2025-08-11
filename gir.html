@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://i.pinimg.com/474x/81/df/27/81df2730d72e7e01b370d01267561b30.jpg" alt="Gir National Park">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Gir National Park</h1>
+                <p>Home of the majestic Asiatic Lion and Gujarat's crown jewel of wildlife conservation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">In the heart of Saurashtra lies Gir, where the roar of the Asiatic lion echoes through time, a testament to India's successful wildlife conservation story.</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Gir National Park</h2>
+        <div class="about-content">
+            <p>Gir National Park and Wildlife Sanctuary, also known as Sasan Gir, is the last remaining natural habitat of the Asiatic Lion in the world. This magnificent sanctuary spans across 1,412 square kilometers of deciduous forest, grasslands, and rocky hills.</p>
+            <p>Beyond its famous lions, Gir hosts a diverse ecosystem with over 2,375 distinct species of fauna. The sanctuary's unique landscape of teak forests and savanna grasslands provides the perfect environment for its varied wildlife to thrive, making it a crucial biodiversity hotspot in India.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Gir National park</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/d5/75/e4/d575e4866f1d5c72aa303748348574e1.jpg" alt="Asiatic Lion" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Asiatic Lion</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(5,291 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The pride of Gir, the Asiatic Lion is smaller than its African cousin but no less majestic. With a population of over 600 lions, Gir offers the unique opportunity to witness these magnificent creatures in their natural habitat. Best spotted during early morning or late afternoon safaris.</p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/8c/3f/1b/8c3f1b35dd0780af2cad8caedc2b3cfd.jpg" alt="Indian Leopard" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Indian Leopard</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(3,888 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The elusive Indian Leopard is one of Gir's most skilled predators. These graceful cats can often be spotted in the deciduous forests and rocky outcrops. Known for their adaptability, they share their territory with lions, making Gir one of the few places where these big cats coexist.</p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/20/6f/1f/206f1f950927acecf54e0b518845e835.jpg" alt="Sambar Deer" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Sambar Deer</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(4,136 reviews)</span>
+                    </div>
+                    <p class="attraction-description">The Sambar Deer, India's largest deer species, plays a crucial role in Gir's ecosystem. These majestic herbivores can be frequently spotted near water bodies and in the teak forests. Their presence is vital for maintaining the predator-prey balance in the sanctuary.</p>
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

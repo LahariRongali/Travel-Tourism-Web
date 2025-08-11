@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-text {
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        .attractions-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .attractions-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attraction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-info {
+            padding: 20px;
+        }
+
+        .attraction-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f1c40f;
+        }
+
+        .review-count {
+            color: #7f8c8d;
+        }
+
+        .attraction-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                font-size: 1.2rem;
+            }
+
+            .quote {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://i.pinimg.com/736x/5c/c6/3d/5cc63dfa52bc1f506e517a8a012281f2.jpg" alt="Kaziranga National Park">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>Welcome to Kaziranga</h1>
+                <p>Home to the majestic One-horned Rhinoceros and a UNESCO World Heritage Site nestled in the heart of Assam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <p class="quote">Where the mighty Brahmaputra flows, Kaziranga stands as a testament to successful conservation, where each sunrise brings new hope for its magnificent inhabitants.</p>
+    </div>
+
+    <div class="about-section">
+        <h2>Discover Kaziranga</h2>
+        <div class="about-content">
+            <p>Kaziranga National Park, a UNESCO World Heritage Site, is home to two-thirds of the world's Great One-horned Rhinoceros. This magnificent park spans across 430 square kilometers of pristine wilderness, creating a haven for diverse wildlife.</p>
+            <p>Beyond its famous rhinos, Kaziranga boasts a rich ecosystem with extensive elephant grass, marshland, and dense tropical moist broadleaf forests. The park hosts numerous other endangered species, including the Bengal Tiger, Asian Elephant, Wild Water Buffalo, and various species of migratory birds, making it one of India's most significant conservation success stories.</p>
+        </div>
+    </div>
+
+    <div class="attractions-section">
+        <h2>Must-Visit Places in Kaziranga</h2>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/736x/7f/d5/af/7fd5afd5203983870aa4e32f45abda6c.jpg" alt="Kaziranga Orchid Park" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Kaziranga Orchid Park</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(3,298 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Home to over 500 species of rare orchids, this beautiful park showcases the rich floral diversity of Northeast India. The park features a beautiful garden, a paper-making unit, and a restaurant serving traditional Assamese cuisine. Visitors can learn about orchid conservation and enjoy cultural performances in the amphitheater.</p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/8c/f2/55/8cf255a30e17347bd0b9c9f3d0c58bf2.jpg" alt="Safari Zones" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Kaziranga National Park Safari Zones</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="review-count">(2,892 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Explore four distinct safari zones - Central (Kaziranga), Western (Bagori), Eastern (Agaratoli), and Burapahar. Each zone offers unique wildlife viewing opportunities, with elephant safaris and jeep tours available. The Central and Eastern zones are particularly famous for rhino sightings, while the Western zone is known for its tiger populations.</p>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <img src="https://i.pinimg.com/474x/d3/f8/62/d3f862d9d21e18395eb1ccbc8281204b.jpg" alt="Hoollongapar Gibbon Sanctuary" class="attraction-image">
+                <div class="attraction-info">
+                    <h3>Hoollongapar Gibbon Sanctuary</h3>
+                    <div class="rating">
+                        <div class="stars">★★★★½</div>
+                        <span class="review-count">(2,789 reviews)</span>
+                    </div>
+                    <p class="attraction-description">Located near Kaziranga, this unique sanctuary is home to India's only apes - the Hoolock Gibbons. The sanctuary also houses other primates like capped langurs, stump-tailed macaques, and northern slow loris. With its evergreen forest canopy, it offers excellent opportunities for wildlife photography and nature walks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
