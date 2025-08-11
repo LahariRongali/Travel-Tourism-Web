@@ -31,3 +31,25 @@ The design is optimized for mobile, tablet, and desktop devices, with interactiv
 ---
 
 ## 📂 Folder Structure
+
+📁 travel-website
+│
+├── 📄 index.html          # Main HTML file
+├── 📄 style.css           # CSS styling
+├── 📄 script.js           # JavaScript functionality
+│
+├── 📁 images              # All images used in the project
+│   ├── home-bg.jpg
+│   ├── package1.jpg
+│   ├── gallery1.jpg
+│   └── ...
+│
+├── 📁 videos              # Video files for background or sections
+│   └── home-video.mp4
+│
+├── 📁 icons               # Icon images if not using online library
+│   └── ...
+│
+├── 📄 README.md           # Project documentation
+└── 📄 LICENSE             # License file (MIT, Apache, etc.)
+
